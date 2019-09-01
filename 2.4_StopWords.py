@@ -52,7 +52,6 @@ def seg_doc(str_doc):
     word_2dlist = [rm_tokens(jieba.cut(part, cut_all=False), stwlist) for part in sent_list]
     # 4.合併列表
     word_list = sum(word_2dlist, [])
-
     return word_list
 
 
@@ -62,4 +61,3 @@ if __name__ == '__main__':
     zh_hant_doc = Converter('zh-hant').convert(str_doc)
     word_list = seg_doc(zh_hant_doc)
     print(word_list)
-    # print('-'*40)
